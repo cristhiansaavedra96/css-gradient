@@ -1,5 +1,4 @@
 import React from 'react';
-
 import GradientRectangle from './GradientRectangle';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../../../hooks/useTheme';
@@ -27,7 +26,7 @@ const ColorGradient = ({ color }) => {
                 <button type="button" onClick={() => handleCreateNew()}>Create New</button>
             </div>
             <div className="gradients__container">
-                {gradientsId.map((e) => 
+                {gradientsId.map((e) =>
                     <GradientRectangle colorsToUse={colorsToUse} key={e} />
                 )}
             </div>

@@ -17,13 +17,13 @@ const getTemplates = async (req, res) => {
 const createTemplate = async (req, res) => {
     const { name, author, firstColor, secondColor, type, direction } = req.body;
     if(await templateExists(name)) {
-        res.status(400).send({
-            message: 'Template already exists.'
+        res.status(200).send({
+            message: 'DUPLICATE'
         });
     } else {
         const response = await pool.query('INSERT INTO templates VALUES ($1, $2, $3, $4, $5, $6)', [name, author, firstColor, secondColor, direction, type]);
         res.status(200).send({
-            message: 'Template added successfully.'
+            message: 'OK'
         });
     }
 }

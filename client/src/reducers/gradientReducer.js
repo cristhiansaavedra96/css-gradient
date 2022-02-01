@@ -1,4 +1,4 @@
-import getRandomColor from "../utils/getRandomColor";
+import { getRandomColor } from "../utils/colorFunctions";
 
 const initialState = {
     style: "linear",

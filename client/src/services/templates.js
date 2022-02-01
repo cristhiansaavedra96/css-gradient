@@ -25,7 +25,7 @@ const createTemplate = async (template) => {
     } catch(e) {
         response = e;
     }
-    return response.status;
+    return response.data;
 }
 
 export {

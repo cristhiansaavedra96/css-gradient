@@ -1,10 +1,10 @@
-function getFormatCss(firstColor, secondColor, style, direction) {
+const getFormatCss = (firstColor, secondColor, style, direction) => {
     let formattedCss = "";
     let defaultDirection = getParsedDirection(direction, style);
     let webkitDirection = getParsedDirection(direction, 'other');
 
-    formattedCss = 
-`background: ${firstColor};
+    formattedCss =
+        `background: ${firstColor};
 background: -webkit-linear-gradient(${webkitDirection ? webkitDirection + ',' : ''} ${firstColor}, ${secondColor});
 background: -moz-linear-gradient(${webkitDirection ? webkitDirection + ',' : ''} ${firstColor}, ${secondColor});
 background: linear-gradient(${defaultDirection ? defaultDirection + ',' : ''} ${firstColor}, ${secondColor});`
@@ -12,7 +12,7 @@ background: linear-gradient(${defaultDirection ? defaultDirection + ',' : ''} ${
     return formattedCss;
 }
 
-function getParsedDirection(direction, style) {
+const getParsedDirection = (direction, style) => {
 
     let parsedDirection = "";
 
@@ -29,7 +29,7 @@ function getParsedDirection(direction, style) {
             default: parsedDirection = "";
                 break;
         }
-    } else if(style==="radial") {
+    } else if (style === "radial") {
         switch (direction) {
             case "top-left": parsedDirection = "left top"; break;
             case "top-mid": parsedDirection = "center top"; break;

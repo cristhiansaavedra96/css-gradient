@@ -1,5 +1,5 @@
 import React from 'react';
-import getRandomColor from '../../../utils/getRandomColor';
+import { getRandomColor } from '../../../utils/colorFunctions';
 import './ColorPicker.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeFirstColor, changeSecondColor } from '../../../reducers/gradientReducer';

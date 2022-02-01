@@ -1,34 +1,22 @@
 import React from 'react';
 import './GradientRectangle.css';
 import { useNavigate } from 'react-router-dom';
-
-const getRandomColor = (array) => {
-    return array[Math.floor(Math.random() * array.length)];
-}
+import { useGradientRectangle } from '../../../../hooks/useGradientRectangle';
 
 const GradientRectangle = ({ colorsToUse }) => {
 
     const navigate = useNavigate();
-    const parseColor = (color) => {
-        return color.slice(1).toLowerCase();
-    }
-
-    let color1 = getRandomColor(colorsToUse);
-    let color2 = getRandomColor(colorsToUse);
-    let rectangleText = `${color1} — ${color2}`;
-
+    const { rectangleText, background, url } = useGradientRectangle(colorsToUse);
     const handleClick = (e) => {
-        navigate(`/?c1=${parseColor(color1)}&c2=${parseColor(color2)}`, { replace: true });
+        navigate(url, { replace: true });
     }
-
-    const background = `linear-gradient(to right, ${color1}, ${color2})`;
 
     return (
-        <div 
+        <div
             className="gradient__rectangle"
-            style={{background: background}}
+            style={{ background: background }}
             onClick={(e) => handleClick(e)}>
-                {rectangleText}
+            {rectangleText}
         </div>
     );
 };

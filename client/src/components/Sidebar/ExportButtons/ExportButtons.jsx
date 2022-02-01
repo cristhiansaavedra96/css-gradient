@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {getFormatCss} from '../../../utils/parseCss';
 import getUrlShare from '../../../utils/getUrlShare';
-import { hexToRgba } from '../../../utils/formatColor';
+import { hexToRgba } from '../../../utils/colorFunctions';
 import './ExportButtons.css';
 import { useSelector } from 'react-redux';
 
