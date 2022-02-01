@@ -165,3 +165,9 @@
 .save__buttons__container__dark button:hover{
     border: 2px solid var(--dark__button__color);
 }
+
+.save__results {
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}

@@ -5,6 +5,7 @@ import { changeShowSaveModal } from '../../../../reducers/modalReducer';
 import { createTemplate } from '../../../../services/templates';
 import { getParsedDirection } from '../../../../utils/parseCss';
 import { useTheme } from '../../../../hooks/useTheme';
+import { BeatLoader } from 'react-spinners';
 
 const SaveModal = () => {
     const { firstColor, secondColor, direction, style } = useSelector(state => state.gradientReducer);
@@ -12,6 +13,7 @@ const SaveModal = () => {
     const [name, setName] = useState('');
     const [author, setAuthor] = useState('');
     const [msg, setMsg] = useState('');
+    const [loading, setLoading] = useState(false);
     const theme = useTheme();
     const dispatch = useDispatch();
     let parsedDirection = getParsedDirection(direction, style);
@@ -38,10 +40,10 @@ const SaveModal = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         if (!name || !author) {
             setMsg('All fields are required.')
         } else {
+            setLoading(true);
             const res = await createTemplate({
                 "name": name,
                 "firstColor": firstColor,
@@ -50,6 +52,7 @@ const SaveModal = () => {
                 "type": style,
                 "author": author
             });
+            setLoading(false);
             if (res === 200) {
                 setName('');
                 setAuthor('');
@@ -87,7 +90,9 @@ const SaveModal = () => {
                         <div className={`save__buttons__container save__buttons__container__${theme}`}>
                             <button type="submit" onClick={(e) => handleSubmit(e)}>Save</button>
                             <button type="button" onClick={(e) => handleClose(e)}>Close</button>
-                            <p>{msg}</p>
+                            <div className="save__results">
+                                {loading ? <BeatLoader size={20} /> : <p>{msg}</p>}
+                            </div>
                         </div>
                     </form>
                 </div>

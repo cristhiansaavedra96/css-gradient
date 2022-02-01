@@ -2,7 +2,7 @@ import { changeActivePage } from "../reducers/pageReducer";
 import { useDispatch } from "react-redux";
 import { useSearchParams, useParams } from "react-router-dom";
 import { changeFirstColor, changeSecondColor, changeStyle, changeDirection, changeTemplate } from "../reducers/gradientReducer";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { getTemplate } from "../services/templates";
 
 const useHomePage = () => {

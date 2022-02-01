@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+require('dotenv').config();
 
 //middlewares
 app.use(express.json());
@@ -14,5 +15,5 @@ app.use(cors({origin: '*'}));
 //routes
 app.use(require('./src/routes/index'));
 
-app.listen(4000);
-console.log('Server on port 4000');
+app.listen(process.env.PORT || 4000);
+console.log(`Server on port 4000`);

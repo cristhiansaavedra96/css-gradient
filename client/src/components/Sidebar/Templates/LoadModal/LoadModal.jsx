@@ -7,10 +7,12 @@ import { getAll } from '../../../../services/templates';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import TemplateCard from './TemplateCard';
+import { BeatLoader } from 'react-spinners';
 
 const LoadModal = () => {
     const theme = useTheme();
     const [templates, setTemplates] = useState();
+    const [loading, setLoading] = useState(true);
 
     const dispatch = useDispatch();
     const handleClose = () => {
@@ -18,7 +20,10 @@ const LoadModal = () => {
     }
 
     useEffect(() => {
-        getAll().then(templates => setTemplates(templates));
+        getAll().then(templates => {
+            setLoading(false);
+            setTemplates(templates)
+        });
     }, []);
 
     return (
@@ -33,10 +38,12 @@ const LoadModal = () => {
                 </button>
                 <hr></hr>
                 <div className="load__templates__container">
-                    {templates ? 
-                    templates.map((template) =>
-                        <TemplateCard template={template} theme={theme} key={template.name} />) 
-                    : null}
+                    {loading ? <div className="loader"><BeatLoader size={30} /></div> :
+                        templates ?
+                            templates.map((template) =>
+                                <TemplateCard template={template} theme={theme} key={template.name} />)
+                            : null
+                    }
                 </div>
             </section>
         </div>
