@@ -1,0 +1,26 @@
+@import '../../../theme/theme.css';
+
+.export__buttons__container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.export__buttons__container input[type="button"] {
+    width: 100%;
+    margin: 5px 0px;
+    height: 48px;
+}
+
+.export__button__light{
+    background-color: var(--light__button__bg);
+    color: var(--light__button__color);
+    border: none;
+}
+
+.export__button__dark{
+    border: none;
+    background: #f1f4f8;
+    color: #3d4853;
+}
+

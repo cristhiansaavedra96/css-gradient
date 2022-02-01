@@ -1,0 +1,38 @@
+.load__template__card{
+    margin: 10px;
+    flex: 0 0 calc(31%);
+    height: 30%;
+    min-height: 150px;
+    border: 1px solid;
+    cursor: pointer;
+    transition: 0.1s;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.load__template__card__light {
+    border: 2px solid var(--light__button__bg);
+    color: var(--light__button__color);
+}
+
+.load__template__card__light:hover{
+    background-color: var(--light__button__bg);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.load__template__card__dark {
+    border: 2px solid var(--dark__button__border);
+    color: var(--dark__button__color);
+}
+
+.load__template__card__dark:hover{
+    border: 2px solid var(--dark__button__color);
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+.load__template__gradient{
+    margin: 15px auto;
+    width: 80%;
+    height: 60%;
+    background-color: red;
+}

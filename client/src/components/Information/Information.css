@@ -1,0 +1,6 @@
+@import '../../theme/theme.css';
+
+.information {
+    width: 100%;
+    z-index: 50;
+}

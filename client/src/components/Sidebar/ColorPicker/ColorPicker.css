@@ -1,0 +1,19 @@
+.input__color__container {
+    position: relative;
+    overflow: hidden;
+    width: 80px;
+    height: 32px;
+    border: solid 3px #ddd;
+    margin-top: 4px;
+    margin-left: 8px;
+    border-radius: 6px;
+}
+
+.colors__container {
+    width: 100%;
+    display: flex;
+}
+
+.input__color__container:first-child{
+    margin-left: 0px;
+}

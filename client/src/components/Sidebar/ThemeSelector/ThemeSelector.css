@@ -1,0 +1,13 @@
+#btnChangeTheme{
+    position: relative;
+    font-size: 20px;
+    margin-left: 0px;
+    cursor: pointer;
+    width: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+.button__container{
+    float: right;
+}

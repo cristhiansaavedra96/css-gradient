@@ -1,0 +1,18 @@
+@import '../../../theme/theme.css';
+
+.direction__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hidden__center{
+    visibility: hidden;
+}
+
+.icon__dark{
+    color: var(--light__sidebar__color);
+}
+
+.icon__light{
+    color: var(--dark__sidebar__color);
+}

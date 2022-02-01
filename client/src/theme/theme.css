@@ -1,0 +1,12 @@
+:root {
+    --light__sidebar__bg: #fff;
+    --light__sidebar__color: #3d4853;
+    --light__button__color: #3d4853;
+    --light__button__bg: #f1f4f8;
+    --dark__sidebar__bg: #262833;
+    --dark__sidebar__color: #fff;
+    --dark__button__border: #3D4853;
+    --dark__button__color: #CEDDEC;
+    --dark__content__color: #CEDDEC;
+    --dark__content__bg: #262833;
+}

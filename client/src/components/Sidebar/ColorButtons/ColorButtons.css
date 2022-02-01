@@ -1,0 +1,8 @@
+.color__buttons__container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color__button__container{
+    margin-right: 5px;
+}

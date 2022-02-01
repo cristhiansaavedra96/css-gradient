@@ -1,0 +1,42 @@
+#text-gradient {
+    background: linear-gradient(to bottom right,#a22fce,#ff7000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 75px;
+}
+
+#linear-gradient {
+    background: #7a7fba;
+    background: -webkit-linear-gradient(top left,#7a7fba,#11c37c);
+    background: -moz-linear-gradient(top left,#7a7fba,#11c37c);
+    background: linear-gradient(to bottom right,#7a7fba,#11c37c);
+    display: block;
+    width: 100%;
+    height: 150px;
+    border-radius: 6px;
+}
+
+#radial-gradient {
+    background: #8986df;
+    background: -webkit-radial-gradient(center,#8986df,#7a136a);
+    background: -moz-radial-gradient(center,#8986df,#7a136a);
+    background: radial-gradient(ellipse at center,#8986df,#7a136a);
+    display: block;
+    width: 100%;
+    height: 150px;
+    border-radius: 6px;
+}
+
+pre {
+    font-family: monospace,monospace;
+    font-size: 1em;
+    white-space: pre-wrap;
+}
+
+pre#demo {
+    padding: 8px;
+}
+
