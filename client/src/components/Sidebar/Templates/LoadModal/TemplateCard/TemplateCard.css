@@ -1,13 +1,15 @@
-.load__template__card{
+.load__template__card {
     margin: 10px;
-    flex: 0 0 calc(31%);
+    flex: 0 0 calc(33% - 30px);
     height: 30%;
-    min-height: 150px;
+    min-height: 190px;
+    min-width: 150px;
     border: 1px solid;
     cursor: pointer;
     transition: 0.1s;
     border-radius: 10px;
     text-align: center;
+    word-wrap: break-word;
 }
 
 .load__template__card__light {
@@ -15,7 +17,7 @@
     color: var(--light__button__color);
 }
 
-.load__template__card__light:hover{
+.load__template__card__light:hover {
     background-color: var(--light__button__bg);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -25,12 +27,12 @@
     color: var(--dark__button__color);
 }
 
-.load__template__card__dark:hover{
+.load__template__card__dark:hover {
     border: 2px solid var(--dark__button__color);
     box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
 
-.load__template__gradient{
+.load__template__gradient {
     margin: 15px auto;
     width: 80%;
     height: 60%;

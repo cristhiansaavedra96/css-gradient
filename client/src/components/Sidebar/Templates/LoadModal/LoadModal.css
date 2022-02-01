@@ -40,7 +40,7 @@
     margin-bottom: 10px;
 }
 
-.closeButton{
+.close__button{
     position: fixed;
     top: 10px;
     right: 10px;
@@ -51,6 +51,30 @@
     cursor: pointer;
     font-size: 25px;
     font-family:'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.close__button__light:before,.close__button__light:after{
+    background-color: var(--light__sidebar__color);
+    
+}
+
+.close__button__dark:before,.close__button__dark:after {
+    background: var(--dark__content__color);
+}
+
+.close__button:before, 
+.close__button:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 20px;
+    transform: rotate(45deg) translate(-50%, -50%);
+    transform-origin: top left;
+    content: '';
+}
+.close__button:after {
+    transform: rotate(-45deg) translate(-50%, -50%);
 }
 
 .load__templates__container{

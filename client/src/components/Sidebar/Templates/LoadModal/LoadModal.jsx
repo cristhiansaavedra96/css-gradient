@@ -21,10 +21,10 @@ const LoadModal = () => {
             <section className={`modal__main modal__main__${theme}`}>
                 <h2>Load Template</h2>
                 <button
-                    className="closeButton"
+                    className={`close__button close__button__${theme}`}
                     type="button"
-                    onClick={handleClose}>
-                    X
+                    onClick={handleClose}
+                >
                 </button>
                 <hr></hr>
                 <div className="load__templates__container">
