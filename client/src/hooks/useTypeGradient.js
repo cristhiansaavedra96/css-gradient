@@ -10,7 +10,7 @@ export const useTypeGradient = (type) => {
 
     useEffect(() => {
         dispatch(changeActivePage('type-gradients'));
-        switch(type){
+        switch (type) {
             case 'linear': setSectionsToUse(linearSections);
                 break;
             case 'radial': setSectionsToUse(radialSections);

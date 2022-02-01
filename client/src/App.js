@@ -21,20 +21,20 @@ function App() {
             <div className="content__right">
                 <Routes>
                     {/* Gradiant type pages */}
-                    <Route path="/linear-gradients" element={<TypeGradient type={'linear'}/>} />
-                    <Route path="/radial-gradients" element={<TypeGradient type={'radial'}/>} />
-                    <Route path="/text-gradients" element={<TypeGradient type={'text'}/>} />
+                    <Route path="/linear-gradients" element={<TypeGradient type={'linear'} />} />
+                    <Route path="/radial-gradients" element={<TypeGradient type={'radial'} />} />
+                    <Route path="/text-gradients" element={<TypeGradient type={'text'} />} />
 
                     {/* Gradiant color pages */}
-                    <Route path="/red-gradient-backgrounds" element={<ColorGradient color={'red'}/>} />
-                    <Route path="/blue-gradient-backgrounds" element={<ColorGradient color={'blue'}/>} />
-                    <Route path="/orange-gradient-backgrounds" element={<ColorGradient color={'orange'}/>} />
-                    <Route path="/yellow-gradient-backgrounds" element={<ColorGradient color={'yellow'}/>} />
-                    <Route path="/monochrome-gradient-backgrounds" element={<ColorGradient color={'monochrome'}/>} />
-                    <Route path="/azure-gradient-backgrounds" element={<ColorGradient color={'azure'}/>} />
-                    <Route path="/pink-gradient-backgrounds" element={<ColorGradient color={'pink'}/>} />
-                    <Route path="/purple-gradient-backgrounds" element={<ColorGradient color={'purple'}/>} />
-                    <Route path="/green-gradient-backgrounds" element={<ColorGradient color={'green'}/>} />
+                    <Route path="/red-gradient-backgrounds" element={<ColorGradient color={'red'} />} />
+                    <Route path="/blue-gradient-backgrounds" element={<ColorGradient color={'blue'} />} />
+                    <Route path="/orange-gradient-backgrounds" element={<ColorGradient color={'orange'} />} />
+                    <Route path="/yellow-gradient-backgrounds" element={<ColorGradient color={'yellow'} />} />
+                    <Route path="/monochrome-gradient-backgrounds" element={<ColorGradient color={'monochrome'} />} />
+                    <Route path="/azure-gradient-backgrounds" element={<ColorGradient color={'azure'} />} />
+                    <Route path="/pink-gradient-backgrounds" element={<ColorGradient color={'pink'} />} />
+                    <Route path="/purple-gradient-backgrounds" element={<ColorGradient color={'purple'} />} />
+                    <Route path="/green-gradient-backgrounds" element={<ColorGradient color={'green'} />} />
 
                     {/* Homepage with colors param */}
                     <Route path="c1" element={<HomePage />} />
@@ -44,7 +44,7 @@ function App() {
 
                     {/* Homepage */}
                     <Route path="/" element={<HomePage />} />
-                </Routes> 
+                </Routes>
             </div>
         </div>
     );

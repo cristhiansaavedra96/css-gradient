@@ -1,17 +1,17 @@
 const initialState = 'home';
 
 const pageReducer = (state = initialState, action) => {
-    switch(action.type){
-        case '@changeActivePage': 
+    switch (action.type) {
+        case '@changeActivePage':
             return state = action.payload;
-        default: 
+        default:
             return state;
     }
 };
 
 const changeActivePage = (activePage) => {
     return {
-        type:"@changeActivePage",
+        type: "@changeActivePage",
         payload: activePage
     }
 }

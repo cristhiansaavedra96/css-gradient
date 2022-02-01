@@ -16,22 +16,22 @@ const Direction = () => {
     return (
         <section>
             <h2>Direction</h2>
-                <div className='direction__container'>
-                    {buttons.map((button) =>
-                        <button
-                            type="button"
-                            id={button.direction}
-                            key={button.direction}
-                            className={
-                                `${style === "linear" && button.direction === "center" ? 'hidden__center' : ''} 
+            <div className='direction__container'>
+                {buttons.map((button) =>
+                    <button
+                        type="button"
+                        id={button.direction}
+                        key={button.direction}
+                        className={
+                            `${style === "linear" && button.direction === "center" ? 'hidden__center' : ''} 
                                 ${button.direction === direction ? 'active' : ''}`
-                            }
-                            onClick={(e) => handleClick(e.currentTarget.id)}
-                        >
-                            {button.icon}
-                        </button>
-                    )}
-                </div>
+                        }
+                        onClick={(e) => handleClick(e.currentTarget.id)}
+                    >
+                        {button.icon}
+                    </button>
+                )}
+            </div>
         </section>
     );
 };

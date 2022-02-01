@@ -4,25 +4,25 @@ const initialState = {
 };
 
 const modalReducer = (state = initialState, action) => {
-    switch(action.type){
-        case '@changeShowSaveModal': 
-            return state = {...state, showSaveModal:!state.showSaveModal};
-        case '@changeShowLoadModal': 
-            return state = {...state, showLoadModal:!state.showLoadModal};
-        default: 
+    switch (action.type) {
+        case '@changeShowSaveModal':
+            return state = { ...state, showSaveModal: !state.showSaveModal };
+        case '@changeShowLoadModal':
+            return state = { ...state, showLoadModal: !state.showLoadModal };
+        default:
             return state;
     }
 };
 
 const changeShowSaveModal = () => {
     return {
-        type:"@changeShowSaveModal"
+        type: "@changeShowSaveModal"
     }
 }
 
 const changeShowLoadModal = () => {
     return {
-        type:"@changeShowLoadModal"
+        type: "@changeShowLoadModal"
     }
 }
 

@@ -5,13 +5,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import { changeFirstColor, changeSecondColor } from '../../../reducers/gradientReducer';
 
 const ColorPicker = () => {
-    const {firstColor, secondColor} = useSelector(state => state.gradientReducer);
+    const { firstColor, secondColor } = useSelector(state => state.gradientReducer);
     const dispatch = useDispatch();
 
     const handleChange = (e) => {
-        e.target.id === 'firstColor' 
-        ? dispatch(changeFirstColor(e.target.value))
-        : dispatch(changeSecondColor(e.target.value));
+        e.target.id === 'firstColor'
+            ? dispatch(changeFirstColor(e.target.value))
+            : dispatch(changeSecondColor(e.target.value));
     }
 
     const handleRandomColor = () => {
@@ -32,11 +32,11 @@ const ColorPicker = () => {
                     />
                 </div>
                 <div className="input__color__container">
-                    <input 
-                        type="color" 
-                        id="secondColor" 
-                        value={secondColor} 
-                        onChange={(e) => handleChange(e)} 
+                    <input
+                        type="color"
+                        id="secondColor"
+                        value={secondColor}
+                        onChange={(e) => handleChange(e)}
                     />
                 </div>
                 <input type="button" id="randomColor" value="Random" onClick={handleRandomColor} />

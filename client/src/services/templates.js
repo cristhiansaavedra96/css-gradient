@@ -10,9 +10,9 @@ const getTemplate = async (templateName) => {
 
 const getAll = async () => {
     let response = "";
-    try { 
-        response = await axios.get(`${baseUrl}/templates`) 
-    } catch(e) {
+    try {
+        response = await axios.get(`${baseUrl}/templates`)
+    } catch (e) {
         response = e;
     }
     return response.data;
@@ -20,9 +20,9 @@ const getAll = async () => {
 
 const createTemplate = async (template) => {
     let response = "";
-    try { 
+    try {
         response = await axios.post(`${baseUrl}/createTemplate`, template);
-    } catch(e) {
+    } catch (e) {
         response = e;
     }
     return response.data;

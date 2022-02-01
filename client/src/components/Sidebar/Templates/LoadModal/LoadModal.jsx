@@ -3,28 +3,18 @@ import './LoadModal.css';
 import { useDispatch } from 'react-redux';
 import { changeShowLoadModal } from '../../../../reducers/modalReducer';
 import { useTheme } from '../../../../hooks/useTheme';
-import { getAll } from '../../../../services/templates';
-import { useEffect } from 'react';
-import { useState } from 'react';
 import TemplateCard from './TemplateCard';
 import { BeatLoader } from 'react-spinners';
+import { useLoadModal } from '../../../../hooks/useLoadModal';
 
 const LoadModal = () => {
     const theme = useTheme();
-    const [templates, setTemplates] = useState();
-    const [loading, setLoading] = useState(true);
+    const { templates, loading } = useLoadModal();
 
     const dispatch = useDispatch();
     const handleClose = () => {
         dispatch(changeShowLoadModal());
     }
-
-    useEffect(() => {
-        getAll().then(templates => {
-            setLoading(false);
-            setTemplates(templates)
-        });
-    }, []);
 
     return (
         <div className="modal">

@@ -56,8 +56,8 @@ const SaveModal = () => {
 
     return (
         <div className="save__modal">
-            <div 
-                className={`save__modal__container save__modal__container__${theme}`} 
+            <div
+                className={`save__modal__container save__modal__container__${theme}`}
                 id="container">
                 <div className={`form__container save__left__container save__left__container__${theme}`}>
                     <form action="#">
@@ -86,8 +86,8 @@ const SaveModal = () => {
                                 onClick={(e) => handleSubmit(e)}>
                                 Save
                             </button>
-                            <button 
-                                type="button" 
+                            <button
+                                type="button"
                                 onClick={(e) => handleClose(e)}>
                                 Close
                             </button>
@@ -99,8 +99,8 @@ const SaveModal = () => {
                 </div>
                 <div className="save__right__container">
                     <div className="save__gradient__container" >
-                        <div 
-                            className="gradient__panel gradient__right" 
+                        <div
+                            className="gradient__panel gradient__right"
                             style={{ background: background }}>
                             {name}
                         </div>

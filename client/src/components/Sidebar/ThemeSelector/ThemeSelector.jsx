@@ -17,12 +17,12 @@ const ThemeSelector = () => {
 
     return (
         <div className="button__container">
-            <button 
+            <button
                 type="button"
-                id="btnChangeTheme" 
-                value="Cambiar tema" 
+                id="btnChangeTheme"
+                value="Cambiar tema"
                 onClick={handleClick}>
-            {theme==="light" ? <BsMoonFill/> : <BsSunFill/>}
+                {theme === "light" ? <BsMoonFill /> : <BsSunFill />}
             </button>
         </div>
     );

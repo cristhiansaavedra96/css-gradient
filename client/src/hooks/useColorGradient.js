@@ -36,7 +36,7 @@ export const useColorGradient = (color) => {
         }
         setGradientsId([1, 2, 3, 4, 5, 6]);
     }, [color, dispatch]);
-    
+
     return {
         colorTitle, colorsToUse, gradientsId
     }

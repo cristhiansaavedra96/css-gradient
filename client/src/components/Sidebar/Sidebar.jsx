@@ -31,7 +31,7 @@ const Sidebar = () => {
                 </div> :
                 <div>
                     <GradientButtons />
-                    <ColorButtons /> 
+                    <ColorButtons />
                 </div>}
         </div>
     );

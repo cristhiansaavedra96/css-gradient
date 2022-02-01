@@ -11,20 +11,20 @@ const GradientButtons = () => {
         <section>
             <h2>Discover by Type</h2>
             <div>
-                <input 
-                    type="button" 
-                    value="Linear" 
-                    id="linear" 
+                <input
+                    type="button"
+                    value="Linear"
+                    id="linear"
                     onClick={(e) => handleClick(e)} />
-                <input 
-                    type="button" 
-                    value="Radial" 
-                    id="radial" 
+                <input
+                    type="button"
+                    value="Radial"
+                    id="radial"
                     onClick={(e) => handleClick(e)} />
-                <input 
-                    type="button" 
-                    value="Text" 
-                    id="text" 
+                <input
+                    type="button"
+                    value="Text"
+                    id="text"
                     onClick={(e) => handleClick(e)} />
             </div>
         </section>

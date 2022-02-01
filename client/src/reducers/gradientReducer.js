@@ -8,53 +8,53 @@ const initialState = {
 }
 
 const gradientReducer = (state = initialState, action) => {
-    switch(action.type){
-        case '@gradient/changeStyle': 
-            return state = {...state, style:action.payload};
-        case '@gradient/changeDirection': 
-            return state = {...state, direction:action.payload};
+    switch (action.type) {
+        case '@gradient/changeStyle':
+            return state = { ...state, style: action.payload };
+        case '@gradient/changeDirection':
+            return state = { ...state, direction: action.payload };
         case '@gradient/firstColor':
-            return state = {...state, firstColor:action.payload};
-        case '@gradient/secondColor': 
-            return state = {...state, secondColor:action.payload};
-        case '@gradient/changeTemplate': 
+            return state = { ...state, firstColor: action.payload };
+        case '@gradient/secondColor':
+            return state = { ...state, secondColor: action.payload };
+        case '@gradient/changeTemplate':
             return state = action.payload;
-        default: 
+        default:
             return state;
     }
 };
 
 const changeStyle = (style) => {
     return {
-        type:"@gradient/changeStyle",
+        type: "@gradient/changeStyle",
         payload: style
     }
 }
 
 const changeDirection = (direction) => {
     return {
-        type:"@gradient/changeDirection",
+        type: "@gradient/changeDirection",
         payload: direction
     }
 }
 
 const changeFirstColor = (firstColor) => {
     return {
-        type:"@gradient/firstColor",
+        type: "@gradient/firstColor",
         payload: firstColor
     }
 }
 
 const changeSecondColor = (secondColor) => {
     return {
-        type:"@gradient/secondColor",
+        type: "@gradient/secondColor",
         payload: secondColor
     }
 }
 
 const changeTemplate = (template) => {
     return {
-        type:"@gradient/changeTemplate",
+        type: "@gradient/changeTemplate",
         payload: {
             firstColor: template.firstColor,
             secondColor: template.secondColor,

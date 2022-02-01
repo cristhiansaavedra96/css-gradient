@@ -1,28 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useColorButton } from '../../../../hooks/useColorButton';
 import './ColorButton.css';
 
 const ColorButton = ({ color, link }) => {
 
     const navigate = useNavigate();
+    const { style } = useColorButton(color);
 
     const handleClick = (e) => {
         navigate(link, { replace: true });
-    }
-
-    let parsedColor = "";
-    if (color === "azure") {
-        parsedColor = "#bdffff";
-    } else if (color === "monochrome") {
-        parsedColor = "#dcdcdc";
-    } else if (color ==="pink"){
-        parsedColor = "#fe7f9c";
-    } else {
-        parsedColor = color;
-    }
-
-    const style = {
-        background: parsedColor
     }
 
     return (
@@ -31,8 +18,7 @@ const ColorButton = ({ color, link }) => {
             type="button"
             style={style}
             onClick={(e) => handleClick(e)}>
-        </button>)
-        ;
+        </button>);
 };
 
 export default ColorButton;

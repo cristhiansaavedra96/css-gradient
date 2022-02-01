@@ -1,21 +1,11 @@
 import React from 'react';
 import './HomeGradient.css';
-import { getParsedDirection } from '../../utils/parseCss';
 import { useSelector } from 'react-redux';
+import { parseBackground } from '../../utils/parseBackground';
 
 const Gradient = () => {
-  const {style, firstColor, secondColor, direction} = useSelector(state => state.gradientReducer);
-  
-  let parsedDirection = getParsedDirection(direction, style);
-  let parsedStyle = "";
-
-  if (style === "linear") {
-    parsedStyle = "linear-gradient"
-  } else {
-    parsedStyle = direction==="center" ? "radial-gradient" : "-webkit-radial-gradient";
-  }
-
-  const background = `${parsedStyle}(${parsedDirection ? parsedDirection + ',' : ''}${firstColor}, ${secondColor})`;
+  const { style, firstColor, secondColor, direction } = useSelector(state => state.gradientReducer);
+  const background = parseBackground(firstColor, secondColor, direction, style);
 
   return <aside
     className="gradient"

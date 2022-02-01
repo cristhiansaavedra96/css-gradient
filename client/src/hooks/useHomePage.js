@@ -13,14 +13,14 @@ const useHomePage = () => {
     }
 
     const { templateName } = useParams();
-    
+
     useEffect(() => {
         dispatch(changeActivePage('home'));
         if (searchParams.get('c1')) dispatch(changeFirstColor(parseColorFromText(searchParams.get('c1'))));
         if (searchParams.get('c2')) dispatch(changeSecondColor(parseColorFromText(searchParams.get('c2'))));
         if (searchParams.get('gt')) dispatch(changeStyle(searchParams.get('gt')));
         if (searchParams.get('gd')) dispatch(changeDirection(searchParams.get('gd')));
-        if (templateName){
+        if (templateName) {
             getTemplate(templateName).then(template => dispatch(changeTemplate(template)));
         };
     }, [dispatch, searchParams, templateName]);

@@ -14,19 +14,19 @@ const OutputFormat = () => {
         <section>
             <h2>Output Format</h2>
             <div>
-                <input 
-                    type="button" 
-                    value="Hex" 
-                    id="hex" 
-                    className={outputFormat==='hex' ? 'active' : ''}
-                    onClick={(e) => handleClick(e)} 
+                <input
+                    type="button"
+                    value="Hex"
+                    id="hex"
+                    className={outputFormat === 'hex' ? 'active' : ''}
+                    onClick={(e) => handleClick(e)}
                 />
-                <input 
-                    type="button" 
-                    value="Rgba" 
+                <input
+                    type="button"
+                    value="Rgba"
                     id="rgba"
-                    className={outputFormat==='rgba' ? 'active' : ''} 
-                    onClick={(e) => handleClick(e)} 
+                    className={outputFormat === 'rgba' ? 'active' : ''}
+                    onClick={(e) => handleClick(e)}
                 />
             </div>
         </section>

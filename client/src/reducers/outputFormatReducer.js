@@ -1,7 +1,7 @@
 const initialState = 'hex';
 
 const outputFormatReducer = (state = initialState, action) => {
-    if(action.type ==="@changeOutputFormat"){
+    if (action.type === "@changeOutputFormat") {
         return state = action.payload
     } else {
         return state;
@@ -10,7 +10,7 @@ const outputFormatReducer = (state = initialState, action) => {
 
 const changeOutputFormat = (outputFormat) => {
     return {
-        type:"@changeOutputFormat",
+        type: "@changeOutputFormat",
         payload: outputFormat
     }
 }

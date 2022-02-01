@@ -1,22 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getParsedDirection } from '../../../../../utils/parseCss';
 import { useDispatch } from 'react-redux';
 import { changeShowLoadModal } from '../../../../../reducers/modalReducer';
 import './TemplateCard.css';
+import { parseBackground } from '../../../../../utils/parseBackground';
 
 const TemplateCard = ({ template, theme }) => {
     let { direction, type, firstColor, secondColor, name, author } = template;
-    let parsedDirection = getParsedDirection(direction, type);
-    let parsedStyle = "";
-
-    if (type === "linear") {
-        parsedStyle = "linear-gradient"
-    } else {
-        parsedStyle = direction === "center" ? "radial-gradient" : "-webkit-radial-gradient";
-    }
-    console.log(template);
-    const background = `${parsedStyle}(${parsedDirection ? parsedDirection + ',' : ''}${firstColor}, ${secondColor})`;
+    const background = parseBackground(firstColor, secondColor, direction, type);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
