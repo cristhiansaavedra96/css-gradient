@@ -21,7 +21,7 @@ const useHomePage = () => {
         if (searchParams.get('gt')) dispatch(changeStyle(searchParams.get('gt')));
         if (searchParams.get('gd')) dispatch(changeDirection(searchParams.get('gd')));
         if (templateName){
-            getTemplate(templateName).then(template => dispatch(changeTemplate(template.myTemplate)));
+            getTemplate(templateName).then(template => dispatch(changeTemplate(template)));
         };
     }, [dispatch, searchParams, templateName]);
 };

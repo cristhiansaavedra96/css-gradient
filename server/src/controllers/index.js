@@ -1,9 +1,17 @@
-const template = require('../models/template');
-const templates = require('../store/templates');
 const getTemplateByName = require('../utils/templateFunctions');
+const { Pool } = require('pg');
+
+const pool = new Pool({
+    host: 'postgresql-cristhiansaavedra.alwaysdata.net',
+    user: 'cristhiansaavedra',
+    password: 'fronterizo',
+    database: 'cristhiansaavedra_pgdb',
+    port: '5432'
+})
 
 const getTemplates = async (req, res) => {
-    await res.send(templates);
+    const response = await pool.query("SELECT * FROM templates");
+    res.status(200).json(response.rows);
 }
 
 const createTemplate = async (req, res) => {
@@ -16,13 +24,8 @@ const createTemplate = async (req, res) => {
         });
     }
     else {
-        await templates.push(new template(
-            req.body.name,
-            req.body.firstColor,
-            req.body.secondColor,
-            req.body.direction,
-            req.body.type,
-            req.body.author));
+        const { name, author, firstColor, secondColor, type, direction } = req.body;
+        const response = await pool.query('INSERT INTO templates VALUES ($1, $2, $3, $4, $5, $6)', [name, author, firstColor, secondColor, direction, type]);
         res.status(200).send({
             message: 'Template added successfully.'
         });
@@ -30,18 +33,9 @@ const createTemplate = async (req, res) => {
 }
 
 const getTemplate = async (req, res) => {
-    let myTemplate = getTemplateByName(req.params.name);
-    
-    if (myTemplate) {
-        res.status(200).send({
-            myTemplate
-        });
-    }
-    else {
-        res.status(400).send({
-            message: 'Template does not exist.'
-        });
-    }
+    const name = req.params.name;
+    const response = await pool.query(`SELECT * FROM templates WHERE name= $1`, [name]);
+    res.status(200).json(response.rows[0]);
 }
 
 module.exports = {
