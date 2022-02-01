@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSection } from '../../../hooks/useSection';
+import { useSection } from '../../../../hooks/useSection';
 import './Section.css';
 
 const Section = ({ title, content, hr }) => {

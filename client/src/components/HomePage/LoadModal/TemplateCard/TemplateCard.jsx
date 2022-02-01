@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { changeShowLoadModal } from '../../../../../reducers/modalReducer';
+import { changeShowLoadModal } from '../../../../reducers/modalReducer';
 import './TemplateCard.css';
-import { parseBackground } from '../../../../../utils/parseBackground';
+import { parseBackground } from '../../../../utils/parseBackground';
 
 const TemplateCard = ({ template, theme }) => {
     let { direction, type, firstColor, secondColor, name, author } = template;

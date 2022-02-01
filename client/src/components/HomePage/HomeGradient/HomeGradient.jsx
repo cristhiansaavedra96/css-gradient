@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomeGradient.css';
 import { useSelector } from 'react-redux';
-import { parseBackground } from '../../utils/parseBackground';
+import { parseBackground } from '../../../utils/parseBackground';
 
 const Gradient = () => {
   const { style, firstColor, secondColor, direction } = useSelector(state => state.gradientReducer);

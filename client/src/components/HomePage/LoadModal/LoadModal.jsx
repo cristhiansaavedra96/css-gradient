@@ -1,11 +1,11 @@
 import React from 'react';
 import './LoadModal.css';
 import { useDispatch } from 'react-redux';
-import { changeShowLoadModal } from '../../../../reducers/modalReducer';
-import { useTheme } from '../../../../hooks/useTheme';
+import { changeShowLoadModal } from '../../../reducers/modalReducer';
+import { useTheme } from '../../../hooks/useTheme';
 import TemplateCard from './TemplateCard';
 import { BeatLoader } from 'react-spinners';
-import { useLoadModal } from '../../../../hooks/useLoadModal';
+import { useLoadModal } from '../../../hooks/useLoadModal';
 
 const LoadModal = () => {
     const theme = useTheme();

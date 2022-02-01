@@ -1,9 +1,9 @@
 import React from 'react';
-import HomeGradient from '../HomeGradient';
-import Information from '../Information';
 import { useSelector } from 'react-redux';
-import LoadModal from '../Sidebar/Templates/LoadModal';
-import SaveModal from '../Sidebar/Templates/SaveModal';
+import HomeGradient from './HomeGradient';
+import Information from './Information';
+import LoadModal from './LoadModal/LoadModal';
+import SaveModal from './SaveModal/SaveModal';
 import useHomePage from '../../hooks/useHomePage';
 
 const HomePage = () => {

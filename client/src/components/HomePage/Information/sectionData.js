@@ -1,4 +1,4 @@
-import config from "../../config";
+import config from "../../../config";
 const URL = config.REACT_APP_URL;
 
 export const sections = [

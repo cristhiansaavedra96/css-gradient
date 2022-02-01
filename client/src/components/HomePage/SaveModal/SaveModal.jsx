@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './SaveModal.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeShowSaveModal } from '../../../../reducers/modalReducer';
-import { createTemplate } from '../../../../services/templates';
-import { useTheme } from '../../../../hooks/useTheme';
+import { changeShowSaveModal } from '../../../reducers/modalReducer';
+import { createTemplate } from '../../../services/templates';
+import { useTheme } from '../../../hooks/useTheme';
 import { BeatLoader } from 'react-spinners';
-import { parseBackground } from '../../../../utils/parseBackground';
+import { parseBackground } from '../../../utils/parseBackground';
 
 const SaveModal = () => {
     const { firstColor, secondColor, direction, style } = useSelector(state => state.gradientReducer);
