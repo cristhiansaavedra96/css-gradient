@@ -53,13 +53,19 @@ const changeSecondColor = (secondColor) => {
 }
 
 const changeTemplate = (template) => {
-    return {
-        type: "@gradient/changeTemplate",
-        payload: {
-            firstColor: template.firstColor,
-            secondColor: template.secondColor,
-            direction: template.direction,
-            style: template.type,
+    if(template){
+        return {
+            type: "@gradient/changeTemplate",
+            payload: {
+                firstColor: template.firstColor,
+                secondColor: template.secondColor,
+                direction: template.direction,
+                style: template.type,
+            }
+        }
+    } else {
+        return {
+            type: "@gradient/default"
         }
     }
 }
