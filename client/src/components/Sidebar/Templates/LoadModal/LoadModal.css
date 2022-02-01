@@ -16,6 +16,8 @@
     height: 75%;
     top: 50%;
     left: 50%;
+    min-width: 360px;
+    min-height: 260px;
     transform: translate(-50%, -50%);
     box-shadow: 2px 0 2px 0 rgb(0 0 0 / 15%);
     border-radius: 10px;
