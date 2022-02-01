@@ -18,7 +18,7 @@ const Sidebar = () => {
 
     return (
         <div className={`sidebar sidebar__${theme}`}>
-            <h1>CSS GRADIENT GENERATOR</h1>
+            <h1><a className={`title__link title__link__${theme}`} href="http://localhost:3000">CSS GRADIENT GENERATOR</a></h1>
             <ThemeSelector />
             {isOnHome ?
                 <div>

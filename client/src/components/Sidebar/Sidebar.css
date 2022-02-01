@@ -13,6 +13,18 @@
     overflow-y: auto;
 }
 
+.title__link {
+    text-decoration: none;
+}
+
+.title__link__light {
+    color: var(--light__sidebar__color);
+}
+
+.title__link__dark {
+    color: var(--dark__sidebar__color);
+}
+
 input[type="color"] {
     position: absolute;
     width: 90px;
@@ -108,6 +120,6 @@ h2 {
     border: 2px solid var(--dark__button__color);
 }
 
-.sidebar__dark input[type="button"]:hover, .sidebar__dark button.hover{
+.sidebar__dark input[type="button"]:hover, .sidebar__dark button:hover{
     border: 2px solid var(--dark__button__color);
 }
