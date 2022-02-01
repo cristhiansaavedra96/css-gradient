@@ -1,6 +1,7 @@
 import axios from 'axios';
+import config from '../config';
 
-const baseUrl = "http://localhost:4000";
+const baseUrl = config.NODE_SERVER_URL;
 
 const getTemplate = async (templateName) => {
     const res = await axios.get(`${baseUrl}/template/${templateName}`);

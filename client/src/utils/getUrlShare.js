@@ -1,10 +1,12 @@
-function getUrlShare(firstColor, secondColor, style, direction){
-    let url = "http://localhost:3000/";
+import config from "../config";
+
+const getUrlShare = (firstColor, secondColor, style, direction) => {
+    let url = config.REACT_APP_URL;
     url += `?c1=${parseColor(firstColor)}&c2=${parseColor(secondColor)}&gt=${style}&gd=${direction}`;
     return url;
 }
 
-function parseColor(color){
+const parseColor = (color) => {
     return color.slice(1).toLowerCase();
 }
 

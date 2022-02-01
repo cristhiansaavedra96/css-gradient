@@ -1,4 +1,5 @@
-const URL = "http://localhost:3000";
+import config from "../../config";
+const URL = config.REACT_APP_URL;
 
 export const sections = [
     {
